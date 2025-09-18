@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barangay Blotter System</title>
+  <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+
+  <h1>Barangay Blotter System</h1>
+
+  <!-- Login -->
+  <div id="loginBox">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username" required>
+    <input type="password" id="loginPass" placeholder="Password" required>
+    <button class="btn btn-primary" onclick="login()">Login</button>
+  </div>
+
+  <!-- User Panel -->
+  <div id="userPanel">
+    <h2>File a New Blotter</h2>
+    <form id="blotterForm">
+      <input type="text" id="location" placeholder="Incident Location" required>
+      <select id="type">
+        <option>Theft</option>
+        <option>Accident</option>
+        <option>Assault</option>
+        <option>Vandalism</option>
+        <option>Other</option>
+      </select>
+      <textarea id="narrative" placeholder="Narrative..." required></textarea>
+      <button type="submit" class="btn btn-primary">Submit Blotter</button>
+    </form>
+
+    <h2>My Blotters</h2>
+    <div id="myBlotters"></div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div id="adminPanel">
+    <h2>Admin Panel - All Blotters</h2>
+    <div id="allBlotters"></div>
+  </div>
+
+  <button id="logoutBtn" class="btn btn-secondary" onclick="logout()">Logout</button>
+
+  <script src="Admin.js"></script>
+</body>
+</html>
