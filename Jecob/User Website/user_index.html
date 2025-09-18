@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login - BBMS</title>
+  <link rel="stylesheet" href="user_style.css">
+</head>
+<body>
+    
+  <div class="bg"></div>
+
+  <main class="center">
+    <div class="card">
+      <div class="logo-box">
+        <img src="logo.png" alt="Barangay Logo">
+      </div>
+      <h1 id="title">User</h1>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="form active">
+        <input id="loginUser" placeholder="Enter Username" required>
+        <input id="loginPass" type="password" placeholder="Enter Password" required>
+        <button id="loginBtn" type="button">Login</button>
+        <p class="muted">Don’t have an account? <a href="#" id="showSignup">Sign Up</a></p>
+      </form>
+       
+      <!-- SIGNUP FORM -->
+      <form id="signupForm" class="form">
+        <input id="suUser" placeholder="Choose Username" required>
+        <input id="suPass" type="password" placeholder="Choose Password" required>
+        <button id="signupBtn" type="button">Create Account</button>
+        <p class="muted">Already registered? <a href="#" id="showLogin">Login</a></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="user_index.js"></script>
+</body>
+</html>
