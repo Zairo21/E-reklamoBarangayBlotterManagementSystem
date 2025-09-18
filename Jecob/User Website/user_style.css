@@ -1,0 +1,149 @@
+:root {
+  --primary: #0B5FFF;
+  --muted: #4a5568;
+  --card-bg: rgba(255,255,255,0.95);
+}
+
+/* Background */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("bg.jpg") center/cover no-repeat;
+  filter: blur(2px) brightness(0.6);
+  z-index: -1;
+}
+
+body, html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 360px;
+  padding: 28px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+}
+.form.active {
+  display: flex;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+  text-align: center;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+button.secondary {
+  background: #ccc;
+  color: #000;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.logo-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background: white;
+  padding: 6px;
+}
+
+/* Topbar brand with logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Dashboard */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ededed;
+  padding: 10px 15px;
+}
+
+.container {
+  padding: 15px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+ul#blotterList {
+  list-style: none;
+  padding: 0;
+}
+ul#blotterList li {
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
