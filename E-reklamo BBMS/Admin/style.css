@@ -197,7 +197,7 @@ a{
 .reports {
   margin: 20px 0;
   padding: 15px;
-  background: #f5f7fa;
+  background: #e7e7e7;
   border-radius: 10px;
 }
 .reports button {
@@ -379,3 +379,4 @@ tbody td{
   .form-row{flex-direction:column}
   .summary{flex-direction:column}
 }
+
