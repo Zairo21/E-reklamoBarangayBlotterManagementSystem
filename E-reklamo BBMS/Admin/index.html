@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BBMS - Admin Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <header class="login-header">
+    <img src="Image/logo.png" alt="Logo" class="logo">
+  </header>
+  <body class="index-page page-fade initial-hide">
+  <div class="bg"></div>
+
+  <main class="center">
+    <div class="content-box">
+      <h1 id="title">Admin Login</h1>
+
+    <form id="loginForm" class="form active">
+    <input type="text" id="loginUsername" placeholder="Username" required>
+     <div class="pwd-field">
+      <input type="password" id="loginPassword" placeholder="Password" minlength="8" required>
+      <button type="button" class="pwd-toggle" data-target="loginPassword" aria-pressed="false" title="Show password">🔒</button>
+     </div>
+
+      <button type="submit" class="btn">Login</button>
+
+    <div class="social-login">
+      <p>Or login with</p>
+      <div class="social-icons">
+        <img src="Image/gmail.png" id="loginGmail" class="icon clickable">
+        <img src="Image/facebook.png" id="loginFacebook" class="icon clickable">
+      </div>
+    </div>
+
+    <p class="muted">Don't have an admin account? <a href="#" id="showCreate">Create</a></p>
+  </form>
+
+  <form id="signupForm" class="form">
+    <input type="text" id="signupUsername" placeholder="Create Username" required>
+    <div class="pwd-field">
+      <input type="password" id="signupPassword" placeholder="Create Password" minlength="8" required>
+      <button type="button" class="pwd-toggle" data-target="signupPassword" aria-pressed="false" title="Show password">🔒</button>
+    </div>
+    <div class="pwd-field">
+      <input type="password" id="signupPasswordConfirm" placeholder="Confirm Password" minlength="8" required>
+      <button type="button" class="pwd-toggle" data-target="signupPasswordConfirm" aria-pressed="false" title="Show password">🔒</button>
+    </div>
+    
+    <button type="submit" class="btn">Create Admin</button>
+
+    <div class="social-login">
+      <p>Or sign up with</p>
+      <div class="social-icons">
+        <img src="Image/gmail.png" id="signupGmail" class="icon clickable">
+        <img src="Image/facebook.png" id="signupFacebook" class="icon clickable">
+      </div>
+    </div>
+
+    <p class="muted">Already have an account? <a href="#" id="showLogin">Login</a></p>
+  </form>
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
