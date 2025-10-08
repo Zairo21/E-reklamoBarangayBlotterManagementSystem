@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - Admin BBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+  <header class="admin-topbar">
+    <div class="brand">
+      <img src="Images/logo.png" class="logo" alt="Logo">
+      <span>BBMS Admin</span>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" onclick="goTo('admin_notifications.html')">
+        <span class="notif-dot" id="notifDot"></span>
+        <span class="notif-icon">🔔</span>
+      </button>
+      <div class="admin-profile" onclick="goTo('admin_profile.html')">
+        <img id="adminProfilePic" src="Images/profile.png" alt="Admin">
+        <span id="adminName">Admin</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <div class="profile-container">
+      <div class="notifications-header">
+        <h2>👤 Admin Profile</h2>
+        <p class="form-subtitle">Manage your profile information</p>
+      </div>
+
+      <div class="profile-section">
+        <div class="profile-pic-section">
+          <img id="adminProfilePicLarge" src="Images/profile.png" alt="Admin Profile" class="profile-pic-large">
+          <input type="file" id="uploadAdminPic" accept="image/*" style="display: none;">
+          <button class="btn-upload" onclick="document.getElementById('uploadAdminPic').click()">
+            📷 Change Photo
+          </button>
+        </div>
+
+        <div class="form-group" style="text-align: center; margin-bottom: 32px;">
+          <h3 id="adminUserName" style="font-size: 24px; margin-bottom: 8px;">Admin</h3>
+          <p id="adminEmail" style="color: var(--muted); font-size: 15px;">admin@bbms.com</p>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="section-title">Account Information</h3>
+          
+          <div class="form-group">
+            <label>
+              <span class="field-label">Username</span>
+              <input type="text" id="displayUsername" disabled style="background: #f1f5f9; cursor: not-allowed;">
+            </label>
+            <p class="form-subtitle" style="margin-top: 8px;">Username cannot be changed</p>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <span class="field-label">Email Address</span>
+              <input type="email" id="adminEmailInput" placeholder="Enter email address">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <span class="field-label">Phone Number</span>
+              <input type="tel" id="adminPhoneInput" placeholder="Enter phone number">
+            </label>
+          </div>
+
+          <button type="button" id="saveProfileBtn" class="btn-save" style="width: 100%;">
+            Save Profile Changes
+          </button>
+        </div>
+
+        <div class="settings-section" style="border: none; margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--border-color);">
+          <div class="modal-actions">
+            <button class="btn-cancel" onclick="goTo('admin_dashboard.html')" style="flex: 1;">
+              Back to Dashboard
+            </button>
+            <button class="btn-cancel" onclick="goTo('admin_settings.html')" style="flex: 1;">
+              Settings
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="admin-nav">
+    <a href="admin_dashboard.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>Dashboard</span>
+    </a>
+    <a href="admin_notifications.html" class="nav-item">
+      <span class="nav-icon">🔔</span>
+      <span>Notifications</span>
+    </a>
+    <a href="admin_history.html" class="nav-item">
+      <span class="nav-icon">📚</span>
+      <span>History</span>
+    </a>
+    <a href="admin_settings.html" class="nav-item">
+      <span class="nav-icon">⚙️</span>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <script src="admin_app.js"></script>
+</body>
+</html>

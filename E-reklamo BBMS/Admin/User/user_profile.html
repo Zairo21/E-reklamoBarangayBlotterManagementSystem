@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - BBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="user_style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="Images/logo.png" class="logo" alt="Logo">
+      BBMS
+    </div>
+    <button class="icon-btn" onclick="goTo('user_notifications.html')">
+      <span class="notif-dot" id="notifDot"></span>
+      <img src="Images/bell.svg" alt="Notifications">
+    </button>
+  </header>
+  
+  <main class="container">
+    <div class="profile-section">
+      <div class="profile-box">
+        <img id="profilePic" src="Images/profile.png" alt="Profile Picture">
+        <input type="file" id="uploadPic" accept="image/*">
+        <h2 id="profileName">User</h2>
+        
+        <!-- READ-ONLY CONTACT INFO -->
+        <div class="contact-info-row">
+          <div class="contact-row">
+            <span class="label">Contact Number:</span>
+            <span id="profileContact">Not set</span>
+            <button type="button" class="edit-btn" id="editContactBtn">Edit</button>
+          </div>
+          <div class="contact-row">
+            <span class="label">Email:</span>
+            <span id="profileEmail">Not set</span>
+            <button type="button" class="edit-btn" id="editEmailBtn">Edit</button>
+          </div>
+        </div>
+        
+        <!-- EDITABLE CONTACT FORM -->
+        <form id="editContactForm" class="edit-contact-form" style="display:none;">
+          <div id="editContactDiv" style="display:none;">
+            <span class="label">Contact Number:</span>
+            <input type="text" id="editContact" required>
+            <button type="button" class="save-btn" id="saveContactBtn">Save</button>
+            <button type="button" class="cancel-btn" id="cancelContactBtn">Cancel</button>
+          </div>
+          <div id="editEmailDiv" style="display:none;">
+            <span class="label">Email:</span>
+            <input type="email" id="editEmail" required>
+            <button type="button" class="save-btn" id="saveEmailBtn">Save</button>
+            <button type="button" class="cancel-btn" id="cancelEmailBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+      
+      <form id="changeUsernameForm" class="change-username-form">
+        <h3>Change Username</h3>
+        <label>
+          <span>New Username</span>
+          <input type="text" id="newUsername" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" id="confirmPassword" required>
+        </label>
+        <button type="button" id="changeUsernameBtn">Change Username</button>
+      </form>
+      
+      <div class="actions">
+        <a href="user_settings.html" class="action-btn">Settings</a>
+        <a href="user_dashboard.html" class="action-btn secondary">Back to Dashboard</a>
+      </div>
+    </div>
+  </main>
+  
+  <nav class="bottom-nav">
+    <a href="user_dashboard.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="user_blotter.html" class="nav-item">
+      <span class="nav-icon">📋</span>
+      <span>Reports</span>
+    </a>
+    <a href="user_settings.html" class="nav-item">
+      <span class="nav-icon">⚙️</span>
+      <span>Settings</span>
+    </a>
+    <a href="user_profile.html" class="nav-item active">
+      <span class="nav-icon">👤</span>
+      <span>Profile</span>
+    </a>
+  
+  <script src="user_app.js"></script>
+</body>
+</html>

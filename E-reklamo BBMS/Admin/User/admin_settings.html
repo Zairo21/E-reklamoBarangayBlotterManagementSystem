@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings - Admin BBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+  <header class="admin-topbar">
+    <div class="brand">
+      <img src="Images/logo.png" class="logo" alt="Logo">
+      <span>BBMS Admin</span>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" onclick="goTo('admin_notifications.html')">
+        <span class="notif-dot" id="notifDot"></span>
+        <span class="notif-icon">🔔</span>
+      </button>
+      <div class="admin-profile" onclick="goTo('admin_profile.html')">
+        <img id="adminProfilePic" src="Images/profile.png" alt="Admin">
+        <span id="adminName">Admin</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <div class="settings-container">
+      <div class="notifications-header">
+        <h2>⚙️ Settings</h2>
+        <p class="form-subtitle">Manage your admin account preferences</p>
+      </div>
+
+      <div class="settings-form">
+        <div class="settings-section">
+          <h3 class="section-title">Appearance</h3>
+          
+          <div class="theme-toggle-container">
+            <div>
+              <div class="field-label">Dark Mode</div>
+              <p class="form-subtitle" style="margin: 0;">Switch between light and dark theme</p>
+            </div>
+            <label class="theme-toggle">
+              <input type="checkbox" id="darkModeToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="section-title">Security</h3>
+          
+          <div class="form-group">
+            <label>
+              <span class="field-label">Change Password</span>
+              <input type="password" id="newAdminPassword" placeholder="Enter new password (min. 8 characters)">
+            </label>
+            <p class="form-subtitle" style="margin-top: 8px;">Leave blank to keep current password</p>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="section-title">Notifications</h3>
+          
+          <div class="form-group">
+            <label>
+              <span class="field-label">Notification Preferences</span>
+              <select id="notifPreference">
+                <option value="all">All Notifications</option>
+                <option value="important">Important Only</option>
+                <option value="none">None</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="section-title">System</h3>
+          
+          <div class="form-group">
+            <label>
+              <span class="field-label">Auto-Archive Resolved Cases</span>
+              <select id="autoArchive">
+                <option value="never">Never</option>
+                <option value="30">After 30 days</option>
+                <option value="60">After 60 days</option>
+                <option value="90">After 90 days</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="saveAdminSettings" class="btn-save">Save Changes</button>
+          <button type="button" class="btn-cancel" onclick="goTo('admin_dashboard.html')">Cancel</button>
+        </div>
+      </div>
+
+      <div class="settings-form" style="margin-top: 24px;">
+        <div class="settings-section" style="border: none; margin: 0; padding: 0;">
+          <button type="button" id="logoutBtn" class="btn-logout">
+            🚪 Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="admin-nav">
+    <a href="admin_dashboard.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>Dashboard</span>
+    </a>
+    <a href="admin_notifications.html" class="nav-item">
+      <span class="nav-icon">🔔</span>
+      <span>Notifications</span>
+    </a>
+    <a href="admin_history.html" class="nav-item">
+      <span class="nav-icon">📚</span>
+      <span>History</span>
+    </a>
+    <a href="admin_settings.html" class="nav-item active">
+      <span class="nav-icon">⚙️</span>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <script src="admin_app.js"></script>
+</body>
+</html>

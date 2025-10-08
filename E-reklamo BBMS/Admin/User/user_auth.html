@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - BBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="user_auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <div class="auth-header">
+        <img src="Images/logo.png" class="auth-logo" alt="Logo">
+        <p>Barangay Blotter Management System</p>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <h2>Welcome Back</h2>
+        <p class="form-desc">Log in to your account</p>
+
+        <div class="input-group">
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" placeholder="Enter your username or phone number" required>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="auth-btn">Log In</button>
+
+        <p class="auth-switch">
+          Don't have an account? 
+          <a href="#" id="showSignup">Sign up here</a>
+        </p>
+      </form>
+
+      <form id="signupForm" class="auth-form" style="display:none;">
+        <h2>Create Account</h2>
+        <p class="form-desc">Sign up to get started</p>
+
+        <div class="input-group">
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" placeholder="Username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupPhone">Phone Number</label>
+          <input type="tel" id="signupPhone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Create a password (min. 8 characters)" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupConfirmPassword">Confirm Password</label>
+          <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+        </div>
+
+        <button type="submit" class="auth-btn">Sign Up</button>
+
+        <p class="auth-switch">
+          Already have an account? 
+          <a href="#" id="showLogin">Log in here</a>
+        </p>
+      </form>
+    </div>
+
+    <div class="auth-footer">
+      <p>&copy; 2025 Barangay Blotter Management System. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="user_app.js"></script>
+</body>
+</html>

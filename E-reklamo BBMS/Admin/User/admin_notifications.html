@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notifications - Admin BBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+  <header class="admin-topbar">
+    <div class="brand">
+      <img src="Images/logo.png" class="logo" alt="Logo">
+      <span>BBMS Admin</span>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" onclick="goTo('admin_notifications.html')">
+        <span class="notif-icon">🔔</span>
+      </button>
+      <div class="admin-profile" onclick="goTo('admin_profile.html')">
+        <img id="adminProfilePic" src="Images/profile.png" alt="Admin">
+        <span id="adminName">Admin</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <div class="notifications-container">
+      <div class="notifications-header">
+        <h2>📬 Notifications</h2>
+        <p class="form-subtitle">Stay updated with all blotter activities</p>
+      </div>
+
+      <ul id="adminNotifList" class="notifications-list">
+        <li class="empty-notif">No notifications yet</li>
+      </ul>
+    </div>
+  </main>
+
+  <nav class="admin-nav">
+    <a href="admin_dashboard.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>Dashboard</span>
+    </a>
+    <a href="admin_notifications.html" class="nav-item active">
+      <span class="nav-icon">🔔</span>
+      <span>Notifications</span>
+    </a>
+    <a href="admin_history.html" class="nav-item">
+      <span class="nav-icon">📚</span>
+      <span>History</span>
+    </a>
+    <a href="admin_settings.html" class="nav-item">
+      <span class="nav-icon">⚙️</span>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <script src="admin_app.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login - BBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <div class="auth-header">
+        <img src="Images/logo.png" class="auth-logo" alt="Logo">
+        <h1>Admin Portal</h1>
+        <p>Barangay Blotter Management System</p>
+      </div>
+
+      <form id="adminLoginForm" class="auth-form">
+        <h2>Admin Access</h2>
+        <p class="form-desc">Log in to manage blotter reports</p>
+
+        <div class="input-group">
+          <label for="adminUsername">Username</label>
+          <input type="text" id="adminUsername" placeholder="Enter admin username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="auth-btn">Log In</button>
+
+        <p class="auth-switch">
+          Don't have admin access? 
+          <a href="#" id="showAdminSignup">Request Access</a>
+        </p>
+      </form>
+
+      <form id="adminSignupForm" class="auth-form" style="display:none;">
+        <h2>Admin Registration</h2>
+        <p class="form-desc">Create admin account</p>
+
+        <div class="input-group">
+          <label for="signupAdminUsername">Username</label>
+          <input type="text" id="signupAdminUsername" placeholder="Create username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupAdminEmail">Email</label>
+          <input type="email" id="signupAdminEmail" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupAdminPhone">Phone Number</label>
+          <input type="tel" id="signupAdminPhone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupAdminPassword">Password</label>
+          <input type="password" id="signupAdminPassword" placeholder="Create password (min. 8 characters)" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupAdminConfirmPassword">Confirm Password</label>
+          <input type="password" id="signupAdminConfirmPassword" placeholder="Confirm your password" required>
+        </div>
+
+        <button type="submit" class="auth-btn">Create Admin Account</button>
+
+        <p class="auth-switch">
+          Already have an account? 
+          <a href="#" id="showAdminLogin">Log in here</a>
+        </p>
+      </form>
+    </div>
+
+    <div class="auth-footer">
+      <p>&copy; 2025 Barangay Blotter Management System. All rights reserved.</p>
+      <p><a href="user_auth.html" style="color: rgba(255,255,255,0.8);">User Portal</a></p>
+    </div>
+  </div>
+
+  <script src="admin_app.js"></script>
+</body>
+</html>
